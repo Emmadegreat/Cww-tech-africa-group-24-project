@@ -67,3 +67,5 @@ prevNextIcon.forEach(icon => {
     });
 });
 
+//to display current year at the footer
+document.getElementById('year').innerHTML = date.getFullYear();
