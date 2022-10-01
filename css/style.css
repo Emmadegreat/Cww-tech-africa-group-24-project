@@ -12,9 +12,11 @@ body{
 nav{
     background: #1d3044;
     color: #ffff;
-    height: 70px;
+    height: 80px;
     width: 100%;
     text-align: center;
+    align-items: center;
+    line-height: 50px;
     padding: 20px;
 }
 .wrapper{
@@ -108,24 +110,35 @@ nav{
     background: #8e457e;
     border-radius: 50%;
 }
-
-@media screen and (max-width:400px){
-    .wrapper{
-        max-width: 310px;
-        width: 100%;
-    }
-}
-
-nav .footer{
+.footer{
     background: #1d3044;
     color: #ffff;
     margin-bottom: 0rem;
-    height: 70px;
+    height: 80px;
     width: 100%;
     text-align: center;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 75%;
+    font-size: 1.1rem;
 }
+
+@media screen and (max-width:768px){
+    .footer{
+        font-size: 0.8rem;
+    }
+    nav{
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width:400px){
+    nav{
+        font-size: 0.5rem;
+    }
+    .wrapper{
+        max-width: 310px;
+        width: 100%;
+    }
+}
+
