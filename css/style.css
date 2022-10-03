@@ -9,22 +9,34 @@
 body{
     background-color: aqua;
 }
+main{
+    padding: 8rem 0rem;
+}
 nav{
     background: #1d3044;
     color: #ffff;
     height: 80px;
     width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
-    align-items: center;
     line-height: 50px;
+    z-index: 2000;
     padding: 20px;
 }
+nav a{
+    font-size: 1.3rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: capitalize;
+}
 .wrapper{
-    margin: 3rem auto;
+    margin: auto;
     max-width: 340px;
     width: 100%;
     height: auto;
-    position: relative;
     display: flex;
     flex-direction: column;
     padding: 0.8rem;
@@ -90,7 +102,7 @@ nav{
     color: #fff;
 }
 .days li.inactive{
-    color: #2c2a28;
+    color: #b4182a;
 }
 .calendar .days li::before{
     position: absolute;
@@ -110,6 +122,7 @@ nav{
     background: #8e457e;
     border-radius: 50%;
 }
+
 .footer{
     background: #1d3044;
     color: #ffff;
@@ -124,17 +137,77 @@ nav{
     font-size: 1.1rem;
 }
 
+/*=======documentation page=========*/
+.container{
+    padding: 2rem;
+}
+.doc-header{
+    text-align: center;
+    padding: 1.1rem;
+}
+.doc-header h2{
+    margin: 1rem;
+}
+.container .description, .appreciation{
+    line-height: 1.6;
+    text-align: justify;
+}
+.container .description h2{
+    text-align: center;
+}
+table{
+    margin: 2rem auto;
+    width: 60%;
+    background: #cbe695;
+}
+table,tr, td, th{
+    border: 1px solid #000;
+}
+td{
+    width: 15rem;
+    color: rgb(87, 32, 215);
+}
+
+/*=======media query=========*/
 @media screen and (max-width:768px){
+    body{
+        background: #fdf3f2;
+    }
+     nav{
+        font-size: 0.7rem;
+    }
+    .wrapper{
+        background: green;
+    }
+
     .footer{
         font-size: 0.8rem;
     }
-    nav{
-        font-size: 0.7rem;
+    .calendar .days li{
+        color: #fff;
+    }
+    .days li.inactive{
+        color: yellow;
+    }
+    .days li.active::before{
+        background: midnightblue;
+        color: green;
+        border-radius: 50%;
+    }
+    table{
+        width: 100%;
     }
 }
 @media screen and (max-width:400px){
     nav{
+        padding: 20px 0px;
+    }
+    nav{
         font-size: 0.5rem;
+    }
+    nav a{
+        font-size: 0.8rem;
+        font-weight:700;
     }
     .wrapper{
         max-width: 310px;
