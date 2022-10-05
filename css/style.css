@@ -32,6 +32,9 @@ nav a{
     font-weight: 700;
     text-transform: capitalize;
 }
+nav a:hover{
+    color: yellow;
+}
 .wrapper{
     margin: auto;
     max-width: 340px;

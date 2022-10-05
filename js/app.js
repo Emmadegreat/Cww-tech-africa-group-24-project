@@ -3,7 +3,7 @@ const daysTag = document.querySelector('.days');
 const prevNextIcon = document.querySelectorAll('.icons span');
 const currentDate2 = document.getElementById('current-date-2');
 
-//getting new date, current year and month
+//getting new date, current year and month variables
 let date = new Date();
 let currentYear = date.getFullYear();
 let currentMonth = date.getMonth();
@@ -30,7 +30,7 @@ const renderCalendar = () => {
     let liTag = "";
 
     for (let i = firstDayOfMonth; i > 0; i--) {
-        liTag += `<li class="inactive">${lastDateOfLastMonth - i + 1}</li>`;// creating li of previous last days
+        liTag += `<li class="inactive">${lastDateOfLastMonth - i + 1}</li>`;// creating li of previous month last days
     }
 
     for (let i = 1; i <= lastDateOfMonth; i++) {// creating list of all days of current month
@@ -53,7 +53,7 @@ renderCalendar();
 
 prevNextIcon.forEach(icon => {
     icon.addEventListener('click', () => { //adding click to the icons
-        //if clicked icon is previos it decrement the month, if not it will in increment the month
+        //if clicked icon is previuos it decrement the month, if not it will increment the month
         currentMonth = icon.id === 'next' ? (currentMonth + 1) : (currentMonth - 1);
 
         if (currentMonth < 0 || currentMonth > 0) {
@@ -69,3 +69,4 @@ prevNextIcon.forEach(icon => {
 
 //to display current year at the footer
 document.getElementById('year').innerHTML = date.getFullYear();
+
